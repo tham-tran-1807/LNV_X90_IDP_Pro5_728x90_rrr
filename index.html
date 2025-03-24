@@ -7,7 +7,7 @@
 <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 <script src="LNV_X90_IDP_Pro5_728x90.js"></script>
 <script>
-var clickTag = "https://www.lenovo.com/sg/en/"; // Thêm clickTag
+window.clickTag = "https://www.lenovo.com/sg/en/"; // Sử dụng window.clickTag để Google Ads nhận diện đúng
 
 var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;
 function init() {
@@ -40,7 +40,7 @@ function handleComplete(evt,comp) {
 
 	// Gán sự kiện click để mở URL theo Google Ads
 	canvas.addEventListener("click", function() {
-		window.open(clickTag, "_blank");
+		window.open(window.clickTag, "_blank");
 	});
 
 	//Registers the "tick" event listener.
